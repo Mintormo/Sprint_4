@@ -1,5 +1,7 @@
 package ru.yandex.praktikum;
 
+import javax.lang.model.type.NullType;
+
 public class Account {
 
     private final String name;
@@ -13,7 +15,8 @@ public class Account {
         boolean spaceExist = name.indexOf(' ') != -1;
         boolean spaceIsOne = name.indexOf(' ') == name.lastIndexOf(' ');
         boolean spaceIsInMiddle = name.indexOf(' ') != 0 && name.indexOf(' ') != (name.length() - 1);
+        boolean isNotEmpty = !name.equals("");
 
-        return length && spaceExist && spaceIsOne && spaceIsInMiddle;
+        return length && spaceExist && spaceIsOne && spaceIsInMiddle && isNotEmpty;
     }
 }
