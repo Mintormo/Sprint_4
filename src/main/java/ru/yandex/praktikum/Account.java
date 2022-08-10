@@ -1,7 +1,5 @@
 package ru.yandex.praktikum;
 
-import javax.lang.model.type.NullType;
-
 public class Account {
 
     private final String name;
